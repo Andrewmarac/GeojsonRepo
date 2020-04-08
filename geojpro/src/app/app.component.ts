@@ -29,5 +29,16 @@ export class AppComponent implements OnInit {
     //Provo a visualizzare le coordinate della prima features
     //console.log(?????);
   }
+  styleFunc = (feature) =>{
+    console.log(feature.i.id)
+    let newColor = "#FF0000"; //RED
+    if(feature.i.id == 0) newColor = "#00FF00"; //GREEN
+    else newColor = "#0000FF"; //BLUE
+    return ({
+      clickable: false,
+      fillColor: newColor,
+      strokeWeight: 1
+    });
+  }
 
 }
